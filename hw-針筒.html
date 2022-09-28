@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>syring</title>
+    <style>
+        /* 針筒主體 */
+        .syring {
+            width: 380px;
+            height: 50px;
+            border: 1px solid gray;
+            border-radius: 0 5px 5px 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: linear-gradient(#fff 10%, rgba(198, 197, 197) 75%, #fff 100%);
+        }
+
+        /* 刻度 */
+        .syring::after {
+            content: "";
+            width: 300px;
+            height: 15px;
+            position: absolute;
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0) 95%, gray 5%);
+            /* 間距 */
+            background-size: 15px;
+            top: -15%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* 針頭 */
+        .syring::before {
+            content: "";
+            width: 50px;
+            height: 0px;
+            border: 1px solid #000;
+            position: absolute;
+            top: 50%;
+            left: 107%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* 台灣製 & 空針筒 */
+        .other {
+            width: 300px;
+            height: 80px;
+            font-family: "微軟正黑體";
+            line-height: 140px;
+            font-size: 0.1rem;
+            border: 1px solid gray;
+            color: gray;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: linear-gradient(#fff 10%, rgb(206, 206, 206) 65%, #fff 100%);
+        }
+
+        /* 黃色 */
+        .other::after {
+            content: "";
+            width: 130px;
+            height: 80px;
+            box-shadow: -30px 0 0 #000;
+            border: 1px solid gray;
+            background: linear-gradient(#f3f3ab 10%, #c3c38c 65%, #f3f3ab 100%);
+            position: absolute;
+            top: 50%;
+            left: 34%;
+            transform: translate(50%, -50%);
+        }
+
+        /* 按頭 */
+        .other::before {
+            content: "";
+            width: 30px;
+            height: 80px;
+            border: 1px solid gray;
+            border-radius: 3px;
+            background: linear-gradient(#fff 10%, rgba(197, 197, 197) 65%, #fff 100%);
+            position: absolute;
+            top: 50%;
+            left: -19%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="syring">
+        <div class="other">Made in Taiwan</div>
+    </div>
+
+</body>
+
+</html>
